@@ -16,6 +16,7 @@ const emptyAddress = {
 };
 
 export default function Checkout() {
+  const { dispatch } = useCart();
   const [address, setAddress] = useState(emptyAddress);
   const [status, setStatus] = useState(STATUS.IDLE);
   const [saveError, setSaveError] = useState(null);
